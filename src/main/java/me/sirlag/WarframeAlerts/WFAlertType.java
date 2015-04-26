@@ -1,7 +1,9 @@
+package me.sirlag.WarframeAlerts;
+
 /**
  * Created by Matthew on 4/25/2015.
  */
-public enum AlertType {
+public enum WFAlertType {
     Alert       ("Alert"),
     Outbreak    ("Outbreak"),
     Invasion    ("Invasion"),
@@ -9,7 +11,7 @@ public enum AlertType {
 
     private final String alertType;
 
-    AlertType(String alertType){
+    WFAlertType(String alertType){
         this.alertType = alertType;
     }
 }
