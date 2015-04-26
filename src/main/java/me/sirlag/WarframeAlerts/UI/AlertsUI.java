@@ -1,6 +1,4 @@
-package me.sirlag.WarframeAlerts.UI;/**
- * Created by Matthew on 4/26/2015.
- */
+package me.sirlag.WarframeAlerts.UI;
 
 import javafx.application.Application;
 import javafx.scene.Node;
@@ -8,7 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import me.sirlag.WarframeAlerts.Faction;
+import me.sirlag.WarframeAlerts.WFAlert;
+import me.sirlag.WarframeAlerts.WFAlertType;
 import org.controlsfx.tools.Borders;
+
+import java.util.ArrayList;
 
 public class AlertsUI extends Application {
 
@@ -18,12 +21,20 @@ public class AlertsUI extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        ArrayList<Faction> factions = new ArrayList<>();
+        factions.add(Faction.GRINEER);
 
-        Button button = new Button("Empty Button");
-        Node wrappedButton = Borders.wrap(button).lineBorder().build().build();
+        ArrayList<String> rewards = new ArrayList<String>();
+        rewards.add("Potato");
+
+        WFAlert alert = new WFAlert("551", "E-Gate", "Mars", "some text", rewards, factions, WFAlertType.Alert);
+
+        AlertPane testAlert = new AlertPane(alert);
+
+        Node wrappedAlert = Borders.wrap(testAlert).lineBorder().build().build();
 
         StackPane root = new StackPane();
-        root.getChildren().addAll(wrappedButton);
+        root.getChildren().addAll(wrappedAlert);
 
         Scene scene = new Scene(root, 300,250);
 
