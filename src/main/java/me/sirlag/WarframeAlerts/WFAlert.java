@@ -1,10 +1,11 @@
+package me.sirlag.WarframeAlerts;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Matthew on 4/25/2015.
  */
-public class Alert {
+public class WFAlert {
     //Strings
     private String guid;
     private String node;
@@ -14,17 +15,17 @@ public class Alert {
 
     //Custom Enums. See the named class
     private ArrayList<Faction> factions;
-    private AlertType alertType;
+    private WFAlertType WFAlertType;
     
-    public Alert(String guid, String node, String planet, String description, ArrayList<String> rewards, ArrayList<Faction> factions,
-                 AlertType alertType) {
+    public WFAlert(String guid, String node, String planet, String description, ArrayList<String> rewards, ArrayList<Faction> factions,
+                   WFAlertType WFAlertType) {
         this.guid = guid;
         this.node = node;
         this.planet = planet;
         this.description = description;
         this.rewards = rewards;
         this.factions = factions;
-        this.alertType = alertType;
+        this.WFAlertType = WFAlertType;
     }
 
     //Getters and Setters
@@ -52,8 +53,8 @@ public class Alert {
         return factions;
     }
 
-    public AlertType getAlertType() {
-        return alertType;
+    public WFAlertType getWFAlertType() {
+        return WFAlertType;
     }
 
 }
