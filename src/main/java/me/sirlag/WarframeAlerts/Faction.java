@@ -1,3 +1,5 @@
+package me.sirlag.WarframeAlerts;
+
 /**
  * Created by Matthew on 4/25/2015.
  */
@@ -12,6 +14,11 @@ public enum Faction {
     private final String faction;
     Faction(String faction) {
         this.faction = faction;
+    }
+
+    public String getFaction()
+    {
+        return faction;
     }
 }
 

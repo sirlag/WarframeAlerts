@@ -1,3 +1,5 @@
+package me.sirlag.WarframeAlerts;
+
 /**
  * Created by Matthew on 4/26/2015.
  */
