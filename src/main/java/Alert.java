@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,21 +10,20 @@ public class Alert {
     private String node;
     private String planet;
     private String description;
-    private List<String> rewards;
+    private ArrayList<String> rewards;
 
     //Custom Enums. See the named class
-    private Faction faction;
+    private ArrayList<Faction> factions;
     private AlertType alertType;
-
-
-    public Alert(String guid, String node, String planet, String description, List<String> rewards, Faction faction,
+    
+    public Alert(String guid, String node, String planet, String description, ArrayList<String> rewards, ArrayList<Faction> factions,
                  AlertType alertType) {
         this.guid = guid;
         this.node = node;
         this.planet = planet;
         this.description = description;
         this.rewards = rewards;
-        this.faction = faction;
+        this.factions = factions;
         this.alertType = alertType;
     }
 
@@ -44,12 +44,12 @@ public class Alert {
         return description;
     }
 
-    public List<String> getRewards() {
+    public ArrayList<String> getRewards() {
         return rewards;
     }
 
-    public Faction getFaction() {
-        return faction;
+    public ArrayList<Faction> getFactions() {
+        return factions;
     }
 
     public AlertType getAlertType() {
