@@ -16,36 +16,42 @@ import java.io.*;
  * @since 04/25/2015 21:45EST
  * Class to connect via HTTP and access website RSS feed, and modify it appropriately.
  */
-final class WebInterface {
+public final class WebInterface {
     private String url;
     private HttpEntity entity;
+    private InputStream stream;
+    private String data;
     //Put some variables here (InputStream, et cetera)
-    WebInterface(String s) { url = s; }
+    public WebInterface(String s) {
+        url = s;
 
-    private InputStream getInputStream() throws IOException {
+    }
+    private void establishConnection() throws IOException {
         HttpClient httpClient = HttpClientBuilder.create()
                 .setUserAgent("https://github.com/sirlag/WarframeAlerts")
                 .setMaxConnPerRoute(4)
                 .build();
         HttpGet httpGet = new HttpGet(url);
         HttpResponse response = httpClient.execute(httpGet);
+
         entity = response.getEntity();
+        stream = getInputStream();
+        data = getStringFromInputStream();
+    }
+    private InputStream getInputStream() throws IOException {
         return entity.getContent();
     }
     private String getStringFromInputStream() throws IOException {
+        System.out.println(entity.getContentEncoding().toString());
         Charset charSet = Charset.forName(entity.getContentEncoding().toString());
         StringWriter writer = new StringWriter();
-        IOUtils.copy(getInputStream(), writer, charSet);
+        IOUtils.copy(stream, writer, charSet);
+
         return writer.toString();
    }
     @Override
     public String toString() {
-        try {
-            return getStringFromInputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return data;
     }
 }
 
