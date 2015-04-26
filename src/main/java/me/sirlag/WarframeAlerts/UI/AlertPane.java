@@ -1,5 +1,6 @@
 package me.sirlag.WarframeAlerts.UI;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -32,7 +33,9 @@ public class AlertPane extends GridPane{
 
         factionIcon = new ImageView(new Image(FactionParser.parse(alert.getFactions().get(0))));
         factionText = new Label(alert.getFactions().get(0).getFaction());
+        factionText.setAlignment(Pos.CENTER);
 
+        leftPane.setRowIndex(factionIcon, 1);
         leftPane.getChildren().addAll(factionIcon,factionText);
         //Logo is done
 

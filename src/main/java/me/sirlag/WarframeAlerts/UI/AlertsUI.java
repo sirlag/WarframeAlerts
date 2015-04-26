@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import me.sirlag.WarframeAlerts.Faction;
@@ -23,7 +24,6 @@ public class AlertsUI extends Application {
     public void start(Stage primaryStage) {
         ArrayList<Faction> factions = new ArrayList<>();
         factions.add(Faction.GRINEER);
-
         ArrayList<String> rewards = new ArrayList<String>();
         rewards.add("Potato");
 
@@ -38,6 +38,8 @@ public class AlertsUI extends Application {
 
         Scene scene = new Scene(root, 300,250);
 
+        Image icon = new Image("/Lotus_Icon.png");
+        primaryStage.getIcons().add(icon);
         primaryStage.setTitle("Warframe Alerts");
         primaryStage.setScene(scene);
         primaryStage.show();
