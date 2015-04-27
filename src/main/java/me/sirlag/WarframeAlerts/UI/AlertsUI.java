@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import me.sirlag.WarframeAlerts.Faction;
@@ -33,8 +34,8 @@ public class AlertsUI extends Application {
 
         Node wrappedAlert = Borders.wrap(testAlert).lineBorder().build().build();
 
-        StackPane root = new StackPane();
-        root.getChildren().addAll(wrappedAlert);
+        FlowPane root = new FlowPane();
+        root.getChildren().addAll(wrappedAlert, new SettingsView());
 
         Scene scene = new Scene(root, 300,250);
 
