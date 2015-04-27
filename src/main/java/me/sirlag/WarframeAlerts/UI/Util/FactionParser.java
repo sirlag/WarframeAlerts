@@ -1,6 +1,6 @@
 package me.sirlag.WarframeAlerts.UI.Util;
 
-import me.sirlag.WarframeAlerts.Faction;
+import me.sirlag.WarframeAlerts.Alert.Faction;
 
 public class FactionParser {
 

@@ -3,14 +3,12 @@ package me.sirlag.WarframeAlerts.UI;
 import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import me.sirlag.WarframeAlerts.Faction;
-import me.sirlag.WarframeAlerts.WFAlert;
-import me.sirlag.WarframeAlerts.WFAlertType;
+import me.sirlag.WarframeAlerts.Alert.Faction;
+import me.sirlag.WarframeAlerts.Alert.WFAlert;
+import me.sirlag.WarframeAlerts.Alert.WFAlertType;
 import org.controlsfx.tools.Borders;
 
 import java.util.ArrayList;

@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 import me.sirlag.WarframeAlerts.UI.Util.FactionParser;
-import me.sirlag.WarframeAlerts.WFAlert;
+import me.sirlag.WarframeAlerts.Alert.WFAlert;
 
 import java.util.ArrayList;
 

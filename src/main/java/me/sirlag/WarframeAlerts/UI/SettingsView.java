@@ -8,7 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import me.sirlag.WarframeAlerts.UI.Util.NotificationSound;
-import me.sirlag.WarframeAlerts.WFAlertType;
+import me.sirlag.WarframeAlerts.Alert.WFAlertType;
 
 import java.util.ArrayList;
 

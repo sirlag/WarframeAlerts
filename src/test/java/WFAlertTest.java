@@ -1,6 +1,6 @@
-import me.sirlag.WarframeAlerts.WFAlert;
-import me.sirlag.WarframeAlerts.WFAlertType;
-import me.sirlag.WarframeAlerts.Faction;
+import me.sirlag.WarframeAlerts.Alert.WFAlert;
+import me.sirlag.WarframeAlerts.Alert.WFAlertType;
+import me.sirlag.WarframeAlerts.Alert.Faction;
 
 import static org.junit.Assert.assertEquals;
 

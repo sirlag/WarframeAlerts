@@ -1,4 +1,4 @@
-package me.sirlag.WarframeAlerts;
+package me.sirlag.WarframeAlerts.Alert;
 
 import java.util.ArrayList;
 

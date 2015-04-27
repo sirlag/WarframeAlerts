@@ -24,7 +24,6 @@ public final class WebInterface {
     //Put some variables here (InputStream, et cetera)
     public WebInterface(String s) {
         url = s;
-
     }
     private void establishConnection() throws IOException {
         HttpClient httpClient = HttpClientBuilder.create()
