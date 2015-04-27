@@ -5,27 +5,27 @@ import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
+import me.sirlag.WarframeAlerts.UI.Util.NotificationSound;
 import me.sirlag.WarframeAlerts.WFAlertType;
 
 import java.util.ArrayList;
 
 public class SettingsView extends FlowPane {
 
-    private ChoiceBox choiceBox;
+    private ChoiceBox<String> choiceBox;
     private ArrayList<WFAlertType> alertTypes;
 
-    private Label alertLabel, outbreakLabel, invasionLabel;
-    private CheckBox alertBox, outbreakBox, invasionBox;
-
+    private CheckBox alertBox;
+    private CheckBox outbreakBox;
+    private CheckBox invasionBox;
 
 
     public SettingsView() {
         VBox checks, lablels;
 
-        ChoiceBox<String> choiceBox = new ChoiceBox<>(FXCollections.observableArrayList("PC", "PS4"));
+        choiceBox = new ChoiceBox<>(FXCollections.observableArrayList("PC", "PS4"));
         choiceBox.setValue("PC");
 
         checks = new VBox(10);
@@ -35,21 +35,23 @@ public class SettingsView extends FlowPane {
         lablels.setPadding(new Insets(20));
 
         alertBox = new CheckBox("Normal Alerts");
-        alertBox.setOnAction(e -> markAlertType(e));
+        alertBox.setOnAction(this::markAlertType);
         alertBox.setSelected(true);
 
         outbreakBox = new CheckBox("Outbreaks");
-        outbreakBox.setOnAction(e -> markAlertType(e));
+        outbreakBox.setOnAction(this::markAlertType);
         outbreakBox.setSelected(true);
 
         invasionBox = new CheckBox("Invasions");
-        invasionBox.setOnAction(e -> markAlertType(e));
+        invasionBox.setOnAction(this::markAlertType);
         invasionBox.setSelected(true);
 
         markAlertType(new ActionEvent());
 
-        checks.getChildren().addAll(alertBox, outbreakBox, invasionBox);
-        lablels.getChildren().addAll(new Label("Alerts"), new Label("Invasions"), new Label("Outbreaks"));
+        CheckBox playSoundBox = new CheckBox("Toggles a sound on notification");
+        playSoundBox.setOnAction(NotificationSound::playNotification);
+
+        checks.getChildren().addAll(alertBox, outbreakBox, invasionBox, playSoundBox);
 
         this.getChildren().addAll(checks, lablels, choiceBox);
     }

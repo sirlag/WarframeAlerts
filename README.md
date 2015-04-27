@@ -12,3 +12,10 @@ TODO
 - Prune old alerts once their time has expired
 - Add Collections of alerts from full rss
 - Regex or other serializment framework to parse the rss feed
+
+Thanks
+=======
+A Big thanks to
+
+- /u/the_original_meepo ([on soundcloud](https://soundcloud.com/third-octave) as the Third Octave, for providing his UI
+sounds free and under Creative Commons.
