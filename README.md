@@ -1,6 +1,6 @@
 WarframeAlerts
 =======
-[![Build Status](https://travis-ci.org/sirlag/WarframeAlerts.svg?branch=master)](https://travis-ci.org/sirlag/WarframeAlerts)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://www.mozilla.org/MPL/2.0/)[![Build Status](https://travis-ci.org/sirlag/WarframeAlerts.svg?branch=master)](https://travis-ci.org/sirlag/WarframeAlerts)
 
 
 Warframe Alerts is a library, designed to give easy access to the warframe alerts api. This library only wraps around publicly avalible data, but is compatible with both ps4 and pc alert feeds.
